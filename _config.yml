@@ -2,3 +2,4 @@ theme: jekyll-theme-cayman
 layout: page
 title: 冯则城的个人博客
 permalink: https://fengzecheng-zj.github.io/
+markdown: kramdown
