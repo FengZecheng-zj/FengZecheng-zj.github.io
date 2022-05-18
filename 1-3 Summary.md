@@ -1,3 +1,10 @@
+---
+layout: post
+title: "POST TITLE"
+date: YYYY-MM-DD hh:mm:ss -0000
+categories: CATEGORY-1 CATEGORY-2
+---
+
 ## Intro
 1. What is diiferent with ohter machine learning 
 2. What's the difference between **Environment state** and **Agent state**
