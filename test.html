@@ -1,0 +1,669 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>1-3 Summary</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="a81e9735-3b9b-433f-b715-adb0c823ed32" class="page sans"><header><h1 class="page-title">1-3 Summary</h1></header><div class="page-body"><h2 id="fdbbc567-656b-434d-89dd-9796c71d981c" class="">Intro</h2><ol type="1" id="33812391-e4be-4d3b-aedb-f9302688a15c" class="numbered-list" start="1"><li>What is diiferent with ohter machine learning</li></ol><ol type="1" id="ee3ff981-de12-46b2-b32a-0e0a5a66ddeb" class="numbered-list" start="2"><li>What’s the difference between <strong>Environment state</strong> and <strong>Agent state</strong> and <strong>information state</strong>(Markov state)</li></ol><ol type="1" id="72cc52f7-8a4b-4486-b1c6-6482fa74f39c" class="numbered-list" start="3"><li>Policy: agent’s behaviour function<ol type="a" id="1d6533e6-0cdb-4895-ab2b-ab4aa98f059a" class="numbered-list" start="1"><li>determinstic</li></ol><ol type="a" id="706c7534-f9a4-4c5e-b0d1-cdc0949520fe" class="numbered-list" start="2"><li>stochastic</li></ol></li></ol><ol type="1" id="d926428e-56ba-495b-85b9-147a03951a4d" class="numbered-list" start="4"><li>Value function:How good<ol type="a" id="69bff932-d9d2-4d09-8fb4-f6ec226fc3c0" class="numbered-list" start="1"><li>state</li></ol></li></ol><ol type="1" id="3173f51b-b2d7-4862-a40a-e57fee79f2ef" class="numbered-list" start="5"><li>Model:agent’s representation of the environment What will environment do ?<ol type="a" id="201352a4-9216-40cd-92be-b001f1fce3af" class="numbered-list" start="1"><li><em>R</em><p id="37aae9f3-7069-488f-a163-01ee25aa4c90" class=""><em>t</em> + 1</p></li></ol><ol type="a" id="c8a6f2d9-629a-4558-9164-f9b89c6e739d" class="numbered-list" start="2"><li><em>S</em><p id="03609875-c636-4990-89e9-bd55c46678ad" class=""><em>t</em> + 1</p></li></ol></li></ol><ol type="1" id="a5d98dc2-ef5b-4a52-9cbc-7cb179b52ebd" class="numbered-list" start="6"><li>Categorize RL<ol type="a" id="ebcfa1ee-003e-49a4-a816-e48346747cb0" class="numbered-list" start="1"><li>Value/Policy based /Actor critic</li></ol><ol type="a" id="614172f5-b6bd-4105-a552-82cc9e01ff81" class="numbered-list" start="2"><li>Model Based/Model Free</li></ol></li></ol><ol type="1" id="07d14974-33b2-49b3-818d-cb750df3e92d" class="numbered-list" start="7"><li>Difference between <strong>Learning</strong> and <strong>Planning</strong></li></ol><ol type="1" id="fcbcb9cf-06cf-49d0-8b5a-fd162db6dd0f" class="numbered-list" start="8"><li>Expolration and Expolitation</li></ol><ol type="1" id="2491dbb7-29f1-448d-b915-6a9d70d6e05a" class="numbered-list" start="9"><li>What’s different ?Prediction and Control ## MDP</li></ol><ol type="1" id="e6f380c7-ee52-4314-9fc6-b1f61335af76" class="numbered-list" start="10"><li>To describe a environment formally<ol type="a" id="dace204e-cab0-45a1-89a3-67cf2414941a" class="numbered-list" start="1"><li>The future is independent of the past given the presentℙ[<em>S</em>|<em>S</em>] = ℙ[<em>S</em>|<em>S</em>, ..., <em>S</em>] Why it can? <strong>Why different complex situation can be described into MDP?</strong> My answer is : According to classic physics, if the information about current state is sufficient, it can be Markov.Even if we do not know about what the state is,We can just set a hiddent markov state. Moreover,it is about philosophy ,haha.<p id="cffe64d9-a838-4a3a-8609-afd32930f00b" class=""><em>t</em> + 1</p><p id="d99196d4-a6a1-4bc6-8bc5-8e23a3546c0b" class=""><em>t</em></p><p id="e8e83031-528d-4aa1-aff0-e73619b4b789" class=""><em>t</em> + 1</p><p id="df83c25a-429c-46ca-8179-2edc842ca25e" class="">1</p><p id="c5ed23e9-4f79-41ef-86de-a1d1eb01f8af" class=""><em>t</em></p></li></ol></li></ol><ol type="1" id="773f28c3-c0b9-4b51-9f34-ae8444067695" class="numbered-list" start="11"><li>State Transition Matrix</li></ol><ol type="1" id="7dbca64e-bf09-4d3a-83ec-96930b1fef3d" class="numbered-list" start="12"><li>Markov Processes</li></ol><ol type="1" id="e1d5f608-9a77-4cfd-b39c-87aaacc4c8ae" class="numbered-list" start="13"><li>Markov Reward Processes<ol type="a" id="8bf4ecaa-d7a9-443e-8aeb-16ec635d7ad6" class="numbered-list" start="1"><li><em>S</em>, <em>P</em>, <em>R</em>, <em>γ</em>, What are they?</li></ol></li></ol><ol type="1" id="2d9ebeee-58c9-45cb-ba47-a02fa74b3229" class="numbered-list" start="14"><li>Return<ol type="a" id="87150fa2-2c78-4425-9d38-3f6c60cd5fcf" class="numbered-list" start="1"><li>total <em>discounted</em> reward</li></ol><ol type="a" id="1b01920f-bded-4f9c-9742-21a3d138a3bc" class="numbered-list" start="2"><li>Why discount?</li></ol></li></ol><ol type="1" id="39b8bb24-7076-42ae-8190-df4a4070500b" class="numbered-list" start="15"><li>Bellman Equation for MRPs<ol type="a" id="ee1bf132-6a31-4c96-909c-ef45cd597d68" class="numbered-list" start="1"><li>Matrix Form //Solving <em>O</em>(<em>n</em>)<p id="3da570bf-9a8c-473b-9991-f9c7084a554a" class="">3</p></li></ol><ol type="a" id="af0ac77e-641f-45a7-a7cd-ad673c37945b" class="numbered-list" start="2"><li>iterative methods:<ol type="i" id="e7f24757-c33a-4587-b790-7aa8dbb5e0ba" class="numbered-list" start="1"><li>DP</li></ol><ol type="i" id="f4d59932-04e1-4a50-bfcb-f29cdd947647" class="numbered-list" start="2"><li>Monte-Carlo evaluation</li></ol><ol type="i" id="cf7c34d6-16db-4456-ba63-47b5b560b051" class="numbered-list" start="3"><li>Temporal-Difference learning</li></ol></li></ol></li></ol><ol type="1" id="2dc66c3c-0436-41d5-8fda-afdcfff998b0" class="numbered-list" start="16"><li>Markov Decision Processes<ol type="a" id="0bf8ed02-8578-4135-8725-0efec193e3b9" class="numbered-list" start="1"><li>S,A,P,R,<em>γ</em>,</li></ol></li></ol><ol type="1" id="1ca4b79f-601a-4373-8c0d-1df763417f90" class="numbered-list" start="17"><li>Bellman Expectation Equation</li></ol><ol type="1" id="01277400-da54-4d16-97da-ecf88328e0b1" class="numbered-list" start="18"><li>What is <em>v</em>(<em>s</em>)<p id="57066291-5040-467f-8025-b1ffa319a919" class=""><em>π</em></p><ol type="1" id="42c3a8d9-a64b-43c1-814b-db3a2d83d87f" class="numbered-list" start="1"><li>Value Function <em>v</em>(<em>s</em>) of an MDP is the expected return starting from state s, and then <strong>following policy</strong> <em>π</em> <em>v</em>(<em>s</em>) = 𝔼[<em>G</em>|<em>S</em> = <em>s</em>]<p id="117a6b37-9845-4822-859c-ecf8e1c953ce" class=""><em>π</em></p><p id="b86224c5-32e8-43ec-a717-d8f9a5cf2488" class=""><em>π</em></p><p id="d331e06e-16c7-4d6c-a067-b712177f69fc" class=""><em>t</em></p><p id="fb1e2ba4-5a8d-463a-9e5b-bf6499a1afa2" class=""><em>t</em></p></li></ol></li></ol><ol type="1" id="453f6354-39ff-4089-8c7c-97c7b92a8bf7" class="numbered-list" start="19"><li>What is <em>q</em>(<em>s</em>, <em>a</em>)?<p id="e7e0cfee-8b69-4254-9996-b7db2dd49ad7" class=""><em>π</em></p></li></ol><ol type="1" id="21f50647-7a4a-4008-af8a-c1efebebecea" class="numbered-list" start="20"><li><strong>Bellman Expecatation Equation</strong><ol type="a" id="24028b05-893a-4c95-83c5-eac413d8a72b" class="numbered-list" start="1"><li>What? Please write down.</li></ol><ol type="a" id="312b807e-4133-4013-8e93-33ebe0436a6b" class="numbered-list" start="2"><li>Matrix Form(solution)</li></ol></li></ol><ol type="1" id="d5968284-86f4-41c9-94f8-3767e103e670" class="numbered-list" start="21"><li>Optimal Value Function?<em>v</em>(<em>s</em>)<ul id="7096790b-99ab-46cb-8439-68c7ffc698e2" class="bulleted-list"><li style="list-style-type:disc"></li></ul><ol type="1" id="9e50c950-40bf-4927-91d6-8c788a87d78e" class="numbered-list" start="1"><li>to certain state s ,for all policy</li></ol><ol type="1" id="c982555b-c4b0-4b20-b689-d2d2e0fcb6c1" class="numbered-list" start="2"><li>q*</li></ol></li></ol><ol type="1" id="b70bb8e2-4835-46de-98c1-cd2a03a67a50" class="numbered-list" start="22"><li>Opimal Policy<em>π</em> &gt; <em>π</em>′ <em>i</em><em>f</em> <em>v</em>(<em>s</em>) ≥ <em>v</em>(<em>s</em>), ∀<em>s</em><p id="3bbef85a-dd22-4ea4-97de-8a9f2609cf57" class=""><em>π</em></p><p id="99ceef7d-2e8b-4734-a82e-09077dbfbd9e" class=""><em>π</em>′</p><ol type="1" id="f863df0b-df6a-4cfa-9a26-518bfaefd50a" class="numbered-list" start="1"><li>Is there exists a optimal policy in all condition?Why?</li></ol><ol type="1" id="6bb9abf0-db2c-4019-ba80-c3df4158e8bd" class="numbered-list" start="2"><li>How to find it?</li></ol><ol type="1" id="0caa984c-0cc9-461b-9c9b-0d9608da37a2" class="numbered-list" start="3"><li>Why we say an MDP is “solved” when we know the optimal value</li></ol></li></ol><ol type="1" id="b7fdd3b2-62cf-4bdc-87ae-050ffff2f9bf" class="numbered-list" start="23"><li><strong>Bellman Optimality Equation</strong></li></ol><ol type="1" id="22d68812-e0b0-4553-896e-53d8eb3176f3" class="numbered-list" start="24"><li>Solving the Vellman Optimality Equation<ol type="a" id="02aca9fd-b2de-466c-b0d9-1737e3ee421a" class="numbered-list" start="1"><li>No closed methods</li></ol><ol type="a" id="3af670f8-b28e-4ad9-9958-a58fefcaa1b0" class="numbered-list" start="2"><li>iterativie methods<ol type="i" id="9c8f89e4-be93-47cf-87d9-036d5c4d3c66" class="numbered-list" start="1"><li>Sarsa</li></ol><ol type="i" id="5e35061a-50f0-41f5-b6fa-b95dfeb9d652" class="numbered-list" start="2"><li>Q-learning</li></ol><ol type="i" id="c7a24938-6047-4ae9-b9d3-1e82c0e62f6f" class="numbered-list" start="3"><li>Policy Iteration</li></ol><ol type="i" id="a0f6e06c-8422-4043-88f7-63f9080b98ae" class="numbered-list" start="4"><li>Value Iteration</li></ol></li></ol></li></ol><h3 id="b677b65e-5377-448f-916e-ed99d522af5b" class="">Dynamic Programming</h3><ol type="1" id="07021c43-9b31-4563-be50-af174512efae" class="numbered-list" start="1"><li>What is Dynamic Programming?Feature?</li></ol><ol type="1" id="6ae972a4-1def-4bab-9146-dd23960f8072" class="numbered-list" start="2"><li>for what kind of problems? Two properties.<ol type="a" id="6d54d9a3-197b-40d1-9174-6e83e1742b64" class="numbered-list" start="1"><li>Markov decision processes satisfy both properties.</li></ol></li></ol><ol type="1" id="d6eaa34e-fb31-4dbd-9762-ca0ee0492014" class="numbered-list" start="3"><li>As Planning, DP assumes full knowledge of the MDP</li></ol><ol type="1" id="34ef5b8a-0a31-4c22-b5b9-53c2f5e46c76" class="numbered-list" start="4"><li>For prediction and for control<ol type="a" id="a14cec07-a4c0-42b5-a048-84049d975cbb" class="numbered-list" start="1"><li>What is the input and output of predcition and control</li></ol></li></ol><ol type="1" id="ff1447cf-22d4-4885-8b78-a0f5daa12bb0" class="numbered-list" start="5"><li>Iterative Policy Evaluation<ol type="a" id="468b31f8-ed11-45be-940b-86880612b89f" class="numbered-list" start="1"><li>How to do it?</li></ol><ol type="a" id="7e176096-9efa-40d1-87ac-f9acf5fe0ec6" class="numbered-list" start="2"><li>Convergence?</li></ol></li></ol><ol type="1" id="c5fa22b4-cde6-4d47-87dc-df5d6e2527a9" class="numbered-list" start="6"><li>Why reward is <em>R</em> not<em>R</em> ? ??????????????????????????????? #没懂<p id="8d8e8f05-fb2e-4d13-8fee-9559fc841abf" class=""><em>s</em></p><p id="645e1c15-dacb-4a53-9ec8-57f430091c46" class=""><em>a</em></p><p id="770b2f94-a43a-4446-94dd-69ec2f662066" class=""><em>s</em></p><ol type="1" id="174d4f0a-1133-485a-a53d-74f24d68fedf" class="numbered-list" start="1"><li>In grid world, reward is for state, not for action</li></ol><ol type="1" id="55c209a5-ab0c-4c6d-8a0f-a3983fa692c0" class="numbered-list" start="2"><li>Because it is in MDP,in definition. But why can MDP?</li></ol></li></ol><ol type="1" id="c42b58b5-fb65-4bed-aa2b-589389188888" class="numbered-list" start="7"><li>How to Improve a Policy?(Policy Iteration)<ol type="a" id="39ce50c2-8788-42a7-a327-16dfb50a53d2" class="numbered-list" start="1"><li>Evaluate the policy</li></ol><ol type="a" id="2438b239-8ef8-4937-b806-f3f08948e6a5" class="numbered-list" start="2"><li>Improve the policy by acting greedily</li></ol><ol type="a" id="19fc28f7-c684-4983-8441-46828bb0b9aa" class="numbered-list" start="3"><li>Prove that.<em>v</em>(<em>s</em>) ≤ <em>v</em>(<em>s</em>)<p id="c45837af-efc4-4b98-9f4d-209c7a015eeb" class=""><em>π</em></p><p id="0503c52f-2ce6-4692-ace5-06fa31ceb7dd" class=""><em>π</em>′</p></li></ol></li></ol><ol type="1" id="c699b566-cc77-4f78-8018-55a71c9613b5" class="numbered-list" start="8"><li>Value Iteration</li></ol><ol type="1" id="7f3bd517-ef23-4741-a458-950e1a67f1e8" class="numbered-list" start="9"><li>All above is based on state-value function, How can we apply it to action-value function?</li></ol><ol type="1" id="23290b2e-b69f-4937-814f-b02a182c9cd6" class="numbered-list" start="10"><li>Contraction 还是没看懂</li></ol></div></article></body></html>
